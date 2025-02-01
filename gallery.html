@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5faff;
+            color: #1a1a1a;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #003d66;
+            color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .logo span {
+            color: #00aaff;
+        }
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 400;
+            position: relative; 
+        }
+        nav a:hover::after,
+        nav a.active::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #00aaff;
+            transition: width 0.3s ease;
+        }
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #00aaff;
+            transition: width 0.3s ease;
+        }
+        nav a:hover,
+        nav a.active {
+            color: #00aaff;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .gallery a {
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .gallery img {
+                width: 100%; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            dzuri<span>atus</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="skill.html">skills</a>
+            <a href="project.html">Project</a>
+            <a class="active" href="gallery.html">gallery</a>
+            <a href="contact.html">contact me</a>
+        </nav>
+    </header>
+    <h1>Gallery</h1>
+
+    <section class="gallery">
+        <a href="#!"><img src="https://i.pinimg.com/564x/30/0c/d8/300cd88916666a4ceb1be0301c68a46b.jpg" alt="Description of image 1" loading="lazy"></a>
+        <a href="#!"><img src="https://i.pinimg.com/736x/b7/d3/62/b7d362c3a360ef9787a748c781fc082a.jpg" alt="Description of image 2" loading="lazy"></a>
+        <a href="#!"><img src="https://i.pinimg.com/564x/46/8e/11/468e11673457446a74a67c96468558d4.jpg" alt="Description of image 3" loading="lazy"></a>
+        <a href="#!"><img src="https://i.pinimg.com/564x/0f/97/f3/0f97f3eda2932d6a4e15506b54e8fc6b.jpg" alt="Description of image 4" loading="lazy"></a>
+        <a href="#!"><img src="https://i.pinimg.com/originals/3b/89/55/3b8955693006933f1a8b4f9eb26ba2f8.jpg" alt="Description of image 5" loading="lazy"></a>
+        <a href="#!"><img src="https://i.pinimg.com/736x/fc/05/93/fc05937bc2eb4e0ed4b01d7a7ed8bab9.jpg" alt="Description of image 6" loading="lazy"></a>
+        <a href="#!"><img src="https://i.pinimg.com/564x/6e/28/4f/6e284f40a27253067d4cd8503e8723ff.jpg" alt="Description of image 7" loading="lazy"></a>
+        <a href="#!"><img src="https://i.pinimg.com/736x/64/e0/17/64e017c9b5f4734e9e1c811b8624ab74.jpg" alt="Description of image 8" loading="lazy"></a>  
+        <a href="#!"><img src="https://i.pinimg.com/736x/8a/e4/9b/8ae49bf003ca4198a99004a0c8cd7cf9.jpg" alt="Description of image 9" loading="lazy"></a>  
+        <a href="#!"><img src="https://i.pinimg.com/736x/96/7f/92/967f922b94ea3a9fe887b44323e6c713.jpg" alt="Description of image 10" loading="lazy"></a>  
+    </section>
+</body>
+</html>

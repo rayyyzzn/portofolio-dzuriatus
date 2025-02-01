@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Dzuriatus</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5faff;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #003d66;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .logo span {
+            color: #00aaff;
+        }
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 400;
+            padding-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover,
+        nav a.active {
+            color: #00aaff;
+            border-bottom: 2px solid #00aaff;
+        }
+        .skills-header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #e0f7ff;
+            color: #003d66;
+        }
+        .skills-header h1 {
+            font-size: 36px;
+            font-weight: 700;
+        }
+        .skills-header p {
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+        .skills-container {
+            padding: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: space-between;
+        }
+        .skill {
+            width: 45%;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .skill-icon {
+            font-size: 40px;
+            color: #00aaff;
+            margin-bottom: 10px;
+        }
+        .skill h3 {
+            font-size: 24px;
+            color: #003d66;
+        }
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 25px;
+            overflow: hidden;
+            width: 100%;
+            height: 10px;
+            margin-top: 10px;
+        }
+        .progress-bar span {
+            display: block;
+            height: 100%;
+            background-color: #00aaff;
+            width: 0;
+            transition: width 2s ease-in-out;
+        }
+        .skill .percent {
+            font-size: 18px;
+            font-weight: 600;
+            color: #00aaff;
+            margin-top: 10px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            dzuri<span>atus</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a class="active" href="skill.html">skills</a>
+            <a href="project.html">Project</a>
+            <a href="gallery.html">gallery</a>
+            <a href="contact.html">contact me</a>
+        </nav>
+    </header>
+
+    <div class="skills-header">
+        <h1>My Skills</h1>
+        <p>Here are the technical skills I have developed over time. From web development to programming languages, I strive to improve every day.</p>
+    </div>
+
+    <main>
+        <div class="skills-container">
+            <div class="skill" data-skill="90">
+                <i class="fab fa-html5 skill-icon"></i>
+                <h3>HTML</h3>
+                <div class="progress-bar">
+                    <span></span>
+                </div>
+                <div class="percent">80%</div>
+            </div>
+            <div class="skill" data-skill="85">
+                <i class="fab fa-css3-alt skill-icon"></i>
+                <h3>CSS</h3>
+                <div class="progress-bar">
+                    <span></span>
+                </div>
+                <div class="percent">75%</div>
+            </div>
+            <div class="skill" data-skill="65">
+                <i class="fab fa-js-square skill-icon"></i>
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <span></span>
+                </div>
+                <div class="percent">60%</div>
+            </div>
+            <div class="skill" data-skill="70">
+                <i class="fab fa-php skill-icon"></i>
+                <h3>PHP</h3>
+                <div class="progress-bar">
+                    <span></span>
+                </div>
+                <div class="percent">70%</div>
+            </div>
+            <div class="skill" data-skill="50">
+                <i class="fab fa-java skill-icon"></i>
+                <h3>Java</h3>
+                <div class="progress-bar">
+                    <span></span>
+                </div>
+                <div class="percent">0%</div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const skills = document.querySelectorAll('.skill');
+        window.addEventListener('scroll', animateSkills);
+
+        function animateSkills() {
+            skills.forEach(skill => {
+                const skillPosition = skill.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (skillPosition <= windowHeight * 0.8) {
+                    const progressBar = skill.querySelector('.progress-bar span');
+                    const skillLevel = skill.dataset.skill;
+                    const percentText = skill.querySelector('.percent');
+                    
+                    progressBar.style.width = `${skillLevel}%`;
+                    percentText.textContent = `${skillLevel}%`;
+                }
+            });
+        }
+
+        animateSkills(); // Trigger animation on page load if in view
+    </script>
+</body>
+</html>

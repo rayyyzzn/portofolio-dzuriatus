@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Dzuriatus</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5faff;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #003d66;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .logo span {
+            color: #00aaff;
+        }
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 400;
+            padding-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover,
+        nav a.active {
+            color: #00aaff;
+            border-bottom: 2px solid #00aaff;
+        }
+        .contact-container {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #e0f7ff;
+            min-height: calc(100vh - 120px); /* Adjust for header height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #00aaff;
+            margin-bottom: 20px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .email {
+            font-size: 20px;
+            color: #00aaff;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25D366;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 15px 30px;
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            background-color: #1ebe5d;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .whatsapp-button i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            dzuri<span>atus</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="skill.html">skills</a>
+            <a href="project.html">Project</a>
+            <a href="gallery.html">gallery</a>
+            <a class="active" href="contact.html">contact me</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <!-- Foto Profil -->
+            <div 
+                class="contact-photo" 
+                style="background-image: url('https://i.pinimg.com/736x/f5/4b/ca/f54bca4600aa4067966c6a970ccbf046.jpg');">
+            </div>
+
+            <!-- Informasi Kontak -->
+            <div class="email">📧 dzuriatus2848@gmail.com</div>
+            <a href="https://wa.me/6285736610996" target="_blank" class="whatsapp-button">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </main>
+</body>
+</html>
